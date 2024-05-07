@@ -15,7 +15,7 @@ so you can just use `cargo build`.
 
 ## Using
 Since this isn't a serious library, I'm not putting it on crates.io. If you clone this repository,
-you can use the crate by adding
+you can use the crate by adding the following to your Cargo.toml:
 ```
 [dependencies]
 arduino_uno_wifi_rt = { /path/to/arduino_uno_r4_wifi_rt }
@@ -28,6 +28,10 @@ In your application, write
 ```
 #[no_std]
 #[no_main]
+
+extern crate arduino_uno_wifi_rt;
+
+use arduino_uno_wifi_rt::entry;
 
 entry!(main);
 
